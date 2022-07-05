@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import TopNav from '@/components/TopNav'
+import TopNav from '@/components/TopNav.vue'
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names

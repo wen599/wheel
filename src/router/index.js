@@ -5,6 +5,7 @@ import ButtonPage from '@/components/ButtonPage'
 import SwitchPage from '@/components/SwitchPage'
 import dialogPage from '@/components/DialogPage'
 import TabsPage from '@/components/TabsPage'
+import NotFound from '@/components/NotFound'
 const routes = [
   {
     path: '/',
@@ -19,28 +20,38 @@ const routes = [
     path: '/doc',
     name: 'doc',
     component: Doc,
-    childen: [
+    children: [
       {
-        path: 'buttonpage',
-        name: 'buttonpage',
-        component: ButtonPage
-      },
-      {
-        path: 'switchpage',
-        name: 'switchpage',
+        path: '',
+        name: 'default',
         component: SwitchPage
       },
       {
-        path: 'dialogpage',
-        name: 'dialogpage',
+        path: 'switch',
+        name: 'switch',
+        component: SwitchPage
+      },
+      {
+        path: 'button',
+        name: 'button',
+        component: ButtonPage
+      },
+      {
+        path: 'dialog',
+        name: 'dialog',
         component: dialogPage
       },
       {
-        path: 'tabspage',
-        name: 'tabspage',
+        path: 'tabs',
+        name: 'tabs',
         component: TabsPage
       }
     ]
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 
