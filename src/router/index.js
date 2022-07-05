@@ -24,6 +24,7 @@ const routes = [
       {
         path: '',
         name: 'default',
+        redirect: '/doc/switch',
         component: SwitchPage
       },
       {

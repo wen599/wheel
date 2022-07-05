@@ -33,16 +33,14 @@ export default {
   name: 'Doc',
   components: { TopNav },
   setup () {
+    // 获取是否显示aside
     const asideVisible = inject('asideVisible')
-    const ToggleVisible = () => {
-      asideVisible.value = !asideVisible.value
-    }
 
     // 点击外面关闭侧边栏
     const closeAside = () => {
-      if (asideVisible.value && window.innerWidth < 500) asideVisible.value = false
+      if (window.innerWidth < 500) asideVisible.value = false
     }
-    return { asideVisible, ToggleVisible, closeAside }
+    return { asideVisible, closeAside }
   }
 
 }
@@ -54,14 +52,28 @@ export default {
   .doc-main{
     flex: 1;
     min-height: 100vh;
-    padding-top:50px;
-    background-color: indianred;
+    padding-top:60px;
+    max-height: 100vh;
+    overflow: auto;
    }
   .doc-aside{
-    padding-top:50px;
+    padding:50px 20px 20px ;
+    margin-right:10px ;
     background-color: aquamarine;
-    max-width: 100px;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: auto;
+    .doc-aside-components{
+      margin: 10px 0;
+      font-weight: 600;
+    }
+    li {
+      margin: 5px 0;
+      font-size: 16px;
+      color: rgb(204, 203, 203);
+      .router-link-active{
+        color: #ff7fa5;
+      }
+    }
   }
 }
 </style>

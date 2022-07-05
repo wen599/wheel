@@ -45,6 +45,7 @@ export default {
 <style lang="scss" scoped>
   .topnav-header{
     position: fixed;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     top: 0;
