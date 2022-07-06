@@ -61,6 +61,7 @@ export default {
     margin-right:10px ;
     background-color: aquamarine;
     height: 100vh;
+    min-width: 100px;
     overflow: auto;
     .doc-aside-components{
       margin: 10px 0;
