@@ -2,7 +2,21 @@
   <TopNav :option="true"/>
   <div class="doc-content" >
     <aside class="doc-aside" v-if="asideVisible">
-      <div class="doc-aside-components">组件列表</div>
+      <div class="doc-aside-components">
+        <router-link to="/doc/intro">文档</router-link>
+      </div>
+      <ul>
+        <li>
+          <router-link to="/doc/intro">介绍</router-link>
+        </li>
+
+        <li>
+          <router-link to="/doc/install">安装</router-link>
+        </li>
+      </ul>
+      <div class="doc-aside-components">
+        <router-link to="/doc/switch">组件列表</router-link>
+      </div>
       <ul>
         <li>
           <router-link to="/doc/switch">Switch组件</router-link>
@@ -48,31 +62,39 @@ export default {
 
 <style lang="scss" >
 .doc-content{
+  //background: linear-gradient(149deg, rgba(238,231,218,1) 0%, rgba(170,215,224,1) 100%);
   display: flex;
+  font-size: 24px;
   .doc-main{
     flex: 1;
     min-height: 100vh;
     padding-top:60px;
     max-height: 100vh;
     overflow: auto;
+    font-size: 16px;
    }
   .doc-aside{
-    padding:50px 20px 20px ;
+    padding:50px 25px 25px ;
     margin-right:10px ;
-    background-color: aquamarine;
+    background-color:rgba(170,215,224,1);
     height: 100vh;
-    min-width: 100px;
+    min-width:200px;
     overflow: auto;
+    font-size: 18px;
+    color: #005967;
+    @media (max-width: 500px) {
+      min-width:100px;
+    }
     .doc-aside-components{
       margin: 10px 0;
       font-weight: 600;
     }
     li {
       margin: 5px 0;
+      color: #0292a9;
       font-size: 16px;
-      color: rgb(204, 203, 203);
       .router-link-active{
-        color: #ff7fa5;
+        color: #03c9ee;
       }
     }
   }

@@ -44,7 +44,6 @@
       </p>
       <p>
         <Button loading>加载中</Button>
-        <Button>加载完成</Button>
       </p>
     </div>
 </template>

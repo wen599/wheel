@@ -52,16 +52,7 @@ export default {
   $h:32px;
   $blue: #4fa6ff;
   $border-color:#dcdfe6;
-  .wheel-button-loading{
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border: 1px solid black;
-    border-bottom: none;
-    border-radius: 10px;
-    animation: rotate 0.75s linear infinite;
-  }
+
   @keyframes rotate {
     from{
       transform: rotateZ(0);
@@ -145,5 +136,22 @@ export default {
     &.wheel-theme-link[disabled],&.wheel-theme-text[disabled]{
       background-color: transparent;
     }
+    &.wheel-loading-true{
+      color: black;
+      border: none;
+      background-color: #f5f5f5;
+    }
+    .wheel-button-loading{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: transparent;
+      border: 1px solid black;
+      border-bottom: none;
+      border-radius: 10px;
+      animation: rotate 0.75s linear infinite;
+
+    }
   }
+
 </style>

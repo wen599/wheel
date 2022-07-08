@@ -6,6 +6,8 @@ import SwitchPage from '@/components/SwitchPage'
 import dialogPage from '@/components/DialogPage'
 import TabsPage from '@/components/TabsPage'
 import NotFound from '@/components/NotFound'
+import Intro from '@/components/Intro'
+import Install from '@/components/Install'
 const routes = [
   {
     path: '/',
@@ -26,6 +28,16 @@ const routes = [
         name: 'default',
         redirect: '/doc/switch',
         component: SwitchPage
+      },
+      {
+        path: 'intro',
+        name: 'intro',
+        component: Intro
+      },
+      {
+        path: 'install',
+        name: 'install',
+        component: Install
       },
       {
         path: 'switch',

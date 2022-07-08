@@ -1,15 +1,16 @@
 <template>
   <header class="topnav-header">
     <span class="topnav-option" @click="ToggleVisible" v-if="option">
-
+      <img src="../assets/list-copy.png">
     </span>
     <div class="topnav-logo" @click="gotoHome" >
-      <h2>小文造轮子</h2>
+      <h3>小文造轮子</h3>
     </div>
 
     <ul class="topnav-nav">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li><router-link to="/doc/intro">
+        文档
+      </router-link></li>
     </ul>
   </header>
 </template>
@@ -53,8 +54,9 @@ export default {
     width: 100vw;
     height: 50px;
     line-height: 50px;
-    background-color: aqua;
-    font-size: 12px;
+    font-size: 16px;
+    padding: 0 25px;
+    border: 1px solid rgba(255,255,255,0.1);
     .topnav-logo{
       cursor:pointer;
     }
@@ -64,14 +66,17 @@ export default {
       top: 15px;
       width: 20px;
       height: 20px;
-      background-color: indianred;
       display: none;
+      >img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
     }
         .topnav-nav{
           display: flex;
               li{
                 margin: 0 10px;
-                outline: 1px solid indianred;
               }
         }
     @media (max-width: 500px) {
