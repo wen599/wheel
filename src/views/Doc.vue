@@ -37,6 +37,44 @@
           <router-link to="/doc/grid">栅格</router-link>
         </li>
       </ul>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
+      <p>11</p>
     </aside>
     <main class="doc-main" @click="closeAside">
         <div class="doc-main-wapper">
@@ -71,19 +109,19 @@ export default {
 
 <style lang="scss" >
 .doc-topnav{
+  z-index: 1;
   background-color:#fff;
 }
 .doc-content{
   //background: linear-gradient(149deg, rgba(238,231,218,1) 0%, rgba(170,215,224,1) 100%);
   display: flex;
   font-size: 24px;
-
   .doc-main{
     background-color: #f0f0f0;
     flex: 1;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     font-size: 16px;
     min-width: 800px;
     overflow: auto;
@@ -92,16 +130,22 @@ export default {
     }
     .doc-main-wapper{
       min-width: 800px;
-      padding:70px  0;
+      padding:70px  100px;
       background-color:#fff;
       height: 100%;
       @media (max-width: 700px) {
         min-width: 100%;
+        padding: 70px 0;
       }
     }
    }
   .doc-aside{
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1;
     padding:50px 0 25px 25px ;
+    background-color:#fff ;
     //margin-right:10px ;
     //background-color:rgba(170,215,224,1);
     height: 100vh;

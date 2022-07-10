@@ -1,23 +1,10 @@
 <template>
-    <Row>
-      <Col>111</Col>
-      <Col>222</Col>
+    <Row class="container" >
+      <Col span="24" class="item" :lg="{span:8}">111</Col>
+      <Col span="24" class="item" :lg="{span:8}">111</Col>
+      <Col span="24" class="item" :lg="{span:8}">111</Col>
+      <Col span="24" class="item" :lg="{span:8}">111</Col>
     </Row>
-  <Row>
-      <Col>111</Col>
-      <Col>222</Col>
-      <Col>333</Col>
-    </Row>
-  <Row>
-    <Col>111</Col>
-    <Col>222</Col>
-    <Col>333</Col>
-    <Col>444</Col>
-  </Row>
-  <Row>
-    <Col span="2">1</Col>
-    <Col span="22">11</Col>
-  </Row>
 </template>
 
 <script>
@@ -32,6 +19,12 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.container{
+  outline: 1px solid darkgreen;
+  .item{
+    outline: 1px solid darkcyan;
+    background-color: #ff7fa5;
+  }
+}
 </style>
