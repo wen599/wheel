@@ -33,6 +33,9 @@
         <li>
           <router-link to="/doc/input">Input组件</router-link>
         </li>
+        <li>
+          <router-link to="/doc/grid">栅格</router-link>
+        </li>
       </ul>
     </aside>
     <main class="doc-main" @click="closeAside">

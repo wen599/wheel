@@ -9,6 +9,7 @@ import NotFound from '@/components/NotFound'
 import Intro from '@/components/Intro'
 import Install from '@/components/Install'
 import InputPage from '@/components/InputPage'
+import gridPage from '@/components/gridPage'
 const routes = [
   {
     path: '/',
@@ -64,6 +65,11 @@ const routes = [
         path: 'input',
         name: 'input',
         component: InputPage
+      },
+      {
+        path: 'grid',
+        name: 'grid',
+        component: gridPage
       }
     ]
   },

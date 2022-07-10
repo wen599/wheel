@@ -1,6 +1,15 @@
 <template>
     <div class="wheel-input-container" :class="{error}">
-      <input class="wheel-input" :value="value" :disabled="disabled" :readonly="readonly">
+      <input
+        class="wheel-input"
+        :value="value"
+        :disabled="disabled"
+        :readonly="readonly"
+        @change="$emit('change',$event)"
+        @input="oninput"
+        @focus="$emit('focus',$event)"
+        @blur="$emit('blur',$event)"
+      >
       <template v-if="error">
         <i class="iconfont icon-cuowu"></i>
         <span class="wheel-input-error-text" >{{error}}</span>
@@ -26,8 +35,13 @@ export default {
       type: String
     }
   },
-  setup () {
-
+  setup (props, context) {
+    const { emit } = context
+    const oninput = (e) => {
+      emit('update:value', e.target.value)
+      emit('input', e)
+    }
+    return { oninput }
   }
 }
 </script>
