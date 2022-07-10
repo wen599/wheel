@@ -8,6 +8,7 @@ import TabsPage from '@/components/TabsPage'
 import NotFound from '@/components/NotFound'
 import Intro from '@/components/Intro'
 import Install from '@/components/Install'
+import InputPage from '@/components/InputPage'
 const routes = [
   {
     path: '/',
@@ -58,6 +59,11 @@ const routes = [
         path: 'tabs',
         name: 'tabs',
         component: TabsPage
+      },
+      {
+        path: 'input',
+        name: 'input',
+        component: InputPage
       }
     ]
   },

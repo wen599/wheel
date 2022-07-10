@@ -1,5 +1,5 @@
 <template>
-  <TopNav :option="true"/>
+  <TopNav :option="true" class="doc-topnav"/>
   <div class="doc-content" >
     <aside class="doc-aside" v-if="asideVisible">
       <div class="doc-aside-components">
@@ -30,10 +30,16 @@
         <li>
           <router-link to="/doc/tabs">Tabs组件</router-link>
         </li>
+        <li>
+          <router-link to="/doc/input">Input组件</router-link>
+        </li>
       </ul>
     </aside>
     <main class="doc-main" @click="closeAside">
-      <router-view></router-view>
+        <div class="doc-main-wapper">
+          <router-view></router-view>
+
+        </div>
     </main>
   </div>
 
@@ -61,29 +67,49 @@ export default {
 </script>
 
 <style lang="scss" >
+.doc-topnav{
+  background-color:#fff;
+}
 .doc-content{
   //background: linear-gradient(149deg, rgba(238,231,218,1) 0%, rgba(170,215,224,1) 100%);
   display: flex;
   font-size: 24px;
+
   .doc-main{
+    background-color: #f0f0f0;
     flex: 1;
-    min-height: 100vh;
-    padding-top:60px;
-    max-height: 100vh;
-    overflow: auto;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
     font-size: 16px;
+    min-width: 800px;
+    overflow: auto;
+    @media (max-width: 700px) {
+      min-width: 0px;
+    }
+    .doc-main-wapper{
+      min-width: 800px;
+      padding:70px  0;
+      background-color:#fff;
+      height: 100%;
+      @media (max-width: 700px) {
+        min-width: 100%;
+      }
+    }
    }
   .doc-aside{
-    padding:50px 25px 25px ;
-    margin-right:10px ;
-    background-color:rgba(170,215,224,1);
+    padding:50px 0 25px 25px ;
+    //margin-right:10px ;
+    //background-color:rgba(170,215,224,1);
     height: 100vh;
-    min-width:200px;
+    min-width:300px;
     overflow: auto;
     font-size: 18px;
     color: #005967;
-    @media (max-width: 500px) {
+    border-right: 1px solid rgba(0,0,0,0.1) ;
+    @media (max-width: 700px) {
       min-width:100px;
+      padding:50px 10px;
     }
     .doc-aside-components{
       margin: 10px 0;

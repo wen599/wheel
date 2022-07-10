@@ -68,7 +68,7 @@ export default {
     border-radius:$h/6 ;
     height: $h;
     outline: none;
-
+    cursor: pointer;
     &.wheel-size-big{
       font-size: 20px;
       padding: 0 20px;
@@ -139,6 +139,7 @@ export default {
     &.wheel-loading-true{
       color: black;
       border: none;
+      cursor: no-drop;
       background-color: #f5f5f5;
     }
     .wheel-button-loading{
@@ -150,7 +151,6 @@ export default {
       border-bottom: none;
       border-radius: 10px;
       animation: rotate 0.75s linear infinite;
-
     }
   }
 

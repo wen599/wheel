@@ -1,15 +1,17 @@
 <template>
   <div class="markdown-body">
-<!--    <Test/>-->
+    <Test/>
   </div>
 </template>
 
 <script>
-// import Test from '@/assets/html常用标签.md'
+import Test from '../assets/html常用标签.md'
+
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Install'
-  // components: { Test }
+  name: 'Install',
+  components: { Test }
+
 }
 </script>
 

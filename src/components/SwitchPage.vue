@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
     .switch-page-content{
-      background-color: #ff7fa5;
-      min-height:100% ;
+      /*background-color: #ff7fa5;*/
+      /*min-height:100% ;*/
     }
 </style>

@@ -58,8 +58,8 @@ export default {
 
 <style lang="scss">
   .button-page-container{
-    background-color: #ff7fa5;
-    min-height:100%;
+    //background-color: #ff7fa5;
+    //min-height:100%;
     >Button{
       margin: 20px;
     }

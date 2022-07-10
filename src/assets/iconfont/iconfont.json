@@ -1,0 +1,121 @@
+{
+  "id": "3509024",
+  "name": "11",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1164841",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "11488168",
+      "name": "set",
+      "font_class": "set",
+      "unicode": "e76c",
+      "unicode_decimal": 59244
+    },
+    {
+      "icon_id": "10678417",
+      "name": "genie SEC",
+      "font_class": "genieSEC",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "30441769",
+      "name": "列表-copy",
+      "font_class": "liebiao-copy",
+      "unicode": "ec7c",
+      "unicode_decimal": 60540
+    },
+    {
+      "icon_id": "5013",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "583122",
+      "name": "加入",
+      "font_class": "76xinzeng",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "630095",
+      "name": "向左箭头",
+      "font_class": "xiangzuojiantou",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "902029",
+      "name": "标签",
+      "font_class": "biaoqian",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "1727425",
+      "name": "206搜索",
+      "font_class": "sousuo",
+      "unicode": "e8ba",
+      "unicode_decimal": 59578
+    },
+    {
+      "icon_id": "2076256",
+      "name": "进入箭头",
+      "font_class": "jinrujiantou",
+      "unicode": "e88e",
+      "unicode_decimal": 59534
+    },
+    {
+      "icon_id": "6061533",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "ec7b",
+      "unicode_decimal": 60539
+    },
+    {
+      "icon_id": "10487569",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "17977683",
+      "name": "icon-记账",
+      "font_class": "icon-jizhang",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "26847398",
+      "name": "百度",
+      "font_class": "BaiDu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "26847441",
+      "name": "谷歌",
+      "font_class": "Google",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "26847486",
+      "name": "必应",
+      "font_class": "Bing",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}
