@@ -36,45 +36,11 @@
         <li>
           <router-link to="/doc/grid">栅格</router-link>
         </li>
+        <li>
+          <router-link to="/doc/layout">Layout布局</router-link>
+        </li>
       </ul>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
-      <p>11</p>
+
     </aside>
     <main class="doc-main" @click="closeAside">
         <div class="doc-main-wapper">
@@ -90,7 +56,6 @@
 import TopNav from '@/components/TopNav.vue'
 import { inject } from 'vue'
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Doc',
   components: { TopNav },
   setup () {
@@ -110,14 +75,15 @@ export default {
 <style lang="scss" >
 .doc-topnav{
   z-index: 1;
-  background-color:#fff;
+  background: linear-gradient(150deg, rgba(238,231,218,1) 0%, rgb(133, 201, 215) 100%);
+
 }
 .doc-content{
-  //background: linear-gradient(149deg, rgba(238,231,218,1) 0%, rgba(170,215,224,1) 100%);
+  background: linear-gradient(149deg, rgba(238,231,218,1) 0%, rgba(170,215,224,1) 100%);
   display: flex;
   font-size: 24px;
   .doc-main{
-    background-color: #f0f0f0;
+    //background-color: #f0f0f0;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -125,17 +91,23 @@ export default {
     font-size: 16px;
     min-width: 800px;
     overflow: auto;
+    .markdown-body{
+      background-color: transparent;
+      pre{
+        background-color: rgba(137, 221, 238, 0.2);
+      }
+    }
     @media (max-width: 700px) {
       min-width: 0px;
     }
     .doc-main-wapper{
       min-width: 800px;
-      padding:70px  100px;
-      background-color:#fff;
+      padding:70px  100px  0;
+      background-color:rgba(255,255,255,0.3);
       height: 100%;
       @media (max-width: 700px) {
         min-width: 100%;
-        padding: 70px 0;
+        padding: 70px 0  0;
       }
     }
    }
@@ -145,7 +117,7 @@ export default {
     top: 0;
     z-index: 1;
     padding:50px 0 25px 25px ;
-    background-color:#fff ;
+    //background-color: #e1e4db;
     //margin-right:10px ;
     //background-color:rgba(170,215,224,1);
     height: 100vh;

@@ -22,7 +22,6 @@
 <script>
 import Button from '@/lib/Button'
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Diglog',
   components: { Button },
   props: {

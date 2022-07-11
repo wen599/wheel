@@ -28,7 +28,7 @@ const proving = {
 }
 
 export default {
-  name: 'w-col',
+  name: 'Col',
   props: {
     span: {
       type: [String, Number]

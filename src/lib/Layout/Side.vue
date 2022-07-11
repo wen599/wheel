@@ -1,12 +1,13 @@
 <template>
-  <div>
-  <slot></slot>
+  <div class="wheel-side">
+    <slot></slot>
+    side
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Tab'
+  name: 'Side'
 }
 </script>
 

@@ -9,7 +9,7 @@
 <script>
 import { provide, toRefs } from 'vue'
 export default {
-  name: 'w-row',
+  name: 'Row',
   props: {
     gutter: {
       type: [String, Number],

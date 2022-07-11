@@ -22,7 +22,6 @@
 import Tab from '@/lib/Tab'
 import { onMounted, onUpdated, ref } from 'vue'
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Tabs',
   props: {
     selected: {

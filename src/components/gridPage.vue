@@ -1,15 +1,84 @@
 <template>
     <Row class="container" >
-      <Col span="24" class="item" :lg="{span:8}">111</Col>
-      <Col span="24" class="item" :lg="{span:8}">111</Col>
-      <Col span="24" class="item" :lg="{span:8}">111</Col>
-      <Col span="24" class="item" :lg="{span:8}">111</Col>
+      <Col
+        span="24"
+        class="item"
+        :xm="{span:12}"
+        :md="{span:8}"
+        :lg="{span:6}"
+        :xl="{span:4}"
+        :xxl="{span:3}"
+      >111</Col>
+      <Col
+        span="24"
+        class="item"
+        :xm="{span:12}"
+        :md="{span:8}"
+        :lg="{span:6}"
+        :xl="{span:4}"
+        :xxl="{span:3}"
+      >111</Col>
+      <Col
+        span="24"
+        class="item"
+        :xm="{span:12}"
+        :md="{span:8}"
+        :lg="{span:6}"
+        :xl="{span:4}"
+        :xxl="{span:3}"
+      >111</Col>
+      <Col
+        span="24"
+        class="item"
+        :xm="{span:12}"
+        :md="{span:8}"
+        :lg="{span:6}"
+        :xl="{span:4}"
+        :xxl="{span:3}"
+      >111</Col>
+      <Col
+        span="24"
+        class="item"
+        :xm="{span:12}"
+        :md="{span:8}"
+        :lg="{span:6}"
+        :xl="{span:4}"
+        :xxl="{span:3}"
+      >111</Col>
+      <Col
+        span="24"
+        class="item"
+        :xm="{span:12}"
+        :md="{span:8}"
+        :lg="{span:6}"
+        :xl="{span:4}"
+        :xxl="{span:3}"
+      >111</Col>
+      <Col
+        span="24"
+        class="item"
+        :xm="{span:12}"
+        :md="{span:8}"
+        :lg="{span:6}"
+        :xl="{span:4}"
+        :xxl="{span:3}"
+      >111</Col>
+      <Col
+        span="24"
+        class="item"
+        :xm="{span:12}"
+        :md="{span:8}"
+        :lg="{span:6}"
+        :xl="{span:4}"
+        :xxl="{span:3}"
+      >111</Col>
     </Row>
+
 </template>
 
 <script>
-import Row from '@/lib/w-row.vue'
-import Col from '@/lib/w-col.vue'
+import Row from '@/lib/Row.vue'
+import Col from '@/lib/Col.vue'
 export default {
 
   name: 'gridPage',

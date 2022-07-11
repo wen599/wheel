@@ -10,6 +10,7 @@ import Intro from '@/components/Intro'
 import Install from '@/components/Install'
 import InputPage from '@/components/InputPage'
 import gridPage from '@/components/gridPage'
+import LayoutPage from '@/components/LayoutPage'
 const routes = [
   {
     path: '/',
@@ -70,6 +71,11 @@ const routes = [
         path: 'grid',
         name: 'grid',
         component: gridPage
+      },
+      {
+        path: 'layout',
+        name: 'layout',
+        component: LayoutPage
       }
     ]
   },

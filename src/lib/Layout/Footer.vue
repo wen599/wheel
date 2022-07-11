@@ -1,12 +1,13 @@
 <template>
-  <div>
+<div class="wheel-footer">
   <slot></slot>
-  </div>
+  footer
+</div>
 </template>
 
 <script>
 export default {
-  name: 'Tab'
+  name: 'Footer'
 }
 </script>
 
