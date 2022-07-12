@@ -1,10 +1,11 @@
 <template>
-  <Button @click="showDialog" >show</Button>
+  <Button @click="showDialog">show</Button>
+
 </template>
 
 <script>
 import Button from '../lib/Button'
-import { openDialog } from '@/lib/openDialog'
+import { openDialog } from '@/lib/wheel-util'
 
 export default {
   name: 'DialogPage',
@@ -14,9 +15,11 @@ export default {
   setup () {
     const showDialog = () => {
       openDialog({
-        title: '标题',
+        title: '标题111',
         content: '你好',
-        overlay: false
+        overlay: false,
+        ok () {},
+        cancel () {}
       })
     }
     return { showDialog }

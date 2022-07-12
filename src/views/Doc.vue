@@ -39,6 +39,12 @@
         <li>
           <router-link to="/doc/layout">Layout布局</router-link>
         </li>
+        <li>
+          <router-link to="/doc/toast">Toast</router-link>
+        </li>
+        <li>
+          <router-link to="/doc/collapse">Collapse</router-link>
+        </li>
       </ul>
 
     </aside>

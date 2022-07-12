@@ -11,6 +11,8 @@ import Install from '@/components/Install'
 import InputPage from '@/components/InputPage'
 import gridPage from '@/components/gridPage'
 import LayoutPage from '@/components/LayoutPage'
+import ToastPage from '@/components/ToastPage'
+import CollapsePage from '@/components/CollapsePage'
 const routes = [
   {
     path: '/',
@@ -76,6 +78,16 @@ const routes = [
         path: 'layout',
         name: 'layout',
         component: LayoutPage
+      },
+      {
+        path: 'toast',
+        name: 'toast',
+        component: ToastPage
+      },
+      {
+        path: 'collapse',
+        name: 'collapse',
+        component: CollapsePage
       }
     ]
   },

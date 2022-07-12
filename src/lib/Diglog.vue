@@ -25,7 +25,6 @@ export default {
   name: 'Diglog',
   components: { Button },
   props: {
-
     visible: {
       type: Boolean,
       default: false
