@@ -1,4 +1,5 @@
 <template>
+  <ToastPage></ToastPage>
   <LayoutPage></LayoutPage>
   <GridPage></GridPage>
   <InputPage></InputPage>
@@ -18,9 +19,10 @@ import DialogPage from '@/components/DialogPage.vue'
 import TabsPage from '@/components/TabsPage.vue'
 import InputPage from '@/components/InputPage.vue'
 import GridPage from '@/components/GridPage.vue'
+import LayoutPage from '@/components/LayoutPage.vue'
+import ToastPage from '@/components/ToastPage.vue'
 
 import { showDialog } from '@/lib/Dialog'
-import LayoutPage from '@/components/LayoutPage.vue'
 
 const test = () => {
   showDialog({
