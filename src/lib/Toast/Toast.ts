@@ -1,10 +1,10 @@
 import Toast from '@/lib/Toast/Toast.vue'
-import { createVNode, render } from 'vue'
+import { createVNode, ref, render } from 'vue'
 type Options={
     time?:number,
     content?:string,
     type?:'success'|'warning'|'message'|'error'
-    close?:()=>void
+    close?:()=>void,
 }
 export const toast = (options:Options|string) => {
   let container = document.querySelector('.wheel-toast-container')
@@ -21,7 +21,6 @@ export const toast = (options:Options|string) => {
   const userClose = options.close
   options.close = () => {
     userClose?.()
-    console.log('销毁div')
     div.remove()
     if (container?.children.length === 0) {
       container.remove()

@@ -1,6 +1,6 @@
 <template>
     <transition name="wheel-toast-fade" appear @after-leave="close" >
-      <div class="wheel-toast" v-if="visible">{{props.content}}</div>
+      <div class="wheel-toast"  v-if="visible" >{{props.content}}</div>
     </transition>
 </template>
 
@@ -18,7 +18,6 @@ const props = withDefaults(defineProps<Props>(), {
   type: 'message',
   time: 3000
 })
-
 // 自动关闭
 const visible = ref(true)
 onMounted(() => {
@@ -36,6 +35,9 @@ const setType = (mainColor:string, asideColor:string, minor:string) => {
   borderColor.value = asideColor
   backgroundColor.value = minor
 }
+
+//
+
 switch (props.type) {
   case 'warning':
     setType('#e6a23c', '#faecd8', '#fdf6ec')
@@ -57,13 +59,12 @@ switch (props.type) {
 .wheel-toast-container{
   position: fixed;
   left: 50%;
-  top: 20px;
-  z-index: 99;
+  top: 0;
+  transform: translate(-50%);
   display: flex;
   flex-direction: column;
-  //border: 1px solid darkcyan;
+  align-items: center;
 }
-
 .wheel-toast-fade-enter-from,
 .wheel-toast-fade-leave-to{
   opacity: 0;
@@ -71,13 +72,16 @@ switch (props.type) {
 }
 .wheel-toast-fade-enter-active,
 .wheel-toast-fade-leave-active{
- transition: all 750ms;
+ transition: all 500ms;
 }
 .wheel-toast{
+  display: inline-block;
   margin-top: 10px;
   min-width: 200px;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
   text-align: center;
-  padding: 10px 30px;
   border: 1px solid v-bind(borderColor);
   background-color: v-bind(backgroundColor);
   color: v-bind(color);

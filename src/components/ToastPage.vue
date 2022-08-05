@@ -3,6 +3,7 @@
   <Button @click="warningToast">warning</Button>
   <Button @click="messageToast">message</Button>
   <Button @click="errorToast">error</Button>
+
 </template>
 
 <script setup lang='ts'>
@@ -10,8 +11,8 @@ import Button from '@/lib/Button.vue'
 import { toast } from '@/lib/Toast/Toast'
 const successToast = () => {
   toast({
-    content: 'test....',
-    time: 1000,
+    content: 'successsuccesssuccesssuccesssuccess',
+    time: 5000,
     close: () => {
       console.log(1111)
     },
@@ -20,7 +21,7 @@ const successToast = () => {
 }
 const warningToast = () => {
   toast({
-    content: 'test....',
+    content: 'warning',
     time: 1000,
     close: () => {
       console.log(1111)
@@ -30,7 +31,7 @@ const warningToast = () => {
 }
 const messageToast = () => {
   toast({
-    content: 'test....',
+    content: 'message',
     time: 1000,
     close: () => {
       console.log(1111)
@@ -40,7 +41,7 @@ const messageToast = () => {
 }
 const errorToast = () => {
   toast({
-    content: 'test....',
+    content: 'error',
     time: 1000,
     close: () => {
       console.log(1111)

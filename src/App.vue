@@ -1,4 +1,5 @@
 <template>
+  <CollapsePage></CollapsePage>
   <ToastPage></ToastPage>
   <LayoutPage></LayoutPage>
   <GridPage></GridPage>
@@ -11,6 +12,10 @@
   <dialog-page></dialog-page>
   <button @click="test">111</button>
   <TabsPage></TabsPage>
+  <button @click="value=!value">111</button>
+<transition name="fade">
+  <div class="test" v-if="value"></div>
+</transition>
 </template>
 <script setup lang="ts">
 import SwitchPage from '@/components/SwitchPage.vue'
@@ -21,8 +26,10 @@ import InputPage from '@/components/InputPage.vue'
 import GridPage from '@/components/GridPage.vue'
 import LayoutPage from '@/components/LayoutPage.vue'
 import ToastPage from '@/components/ToastPage.vue'
+import CollapsePage from '@/components/CollapsePage.vue'
 
 import { showDialog } from '@/lib/Dialog'
+import { ref } from 'vue'
 
 const test = () => {
   showDialog({
@@ -37,14 +44,34 @@ const test = () => {
     onClickMaskClose: false
   })
 }
+const value = ref(false)
+
 </script>
 
 <style   lang="scss" >
-
+.test{
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: red;
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.fade-enter-from,
+.fade-leave-to{
+  opacity: 0;
+  transform: translate(-50%,-100%);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 1s;
+
 }
 
 </style>
