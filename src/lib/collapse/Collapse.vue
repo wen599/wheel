@@ -56,6 +56,7 @@ watch(visibleObj, () => {
 
 <style  lang='scss'>
 .wheel-collapse-container{
+  width: 100%;
   border-bottom:1px solid #ebeef5;
 
 }

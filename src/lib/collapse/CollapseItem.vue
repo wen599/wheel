@@ -36,7 +36,6 @@ type VisibleObj ={
 
 const visibleObj = inject('visibleObj') as VisibleObj
 const visible = toRef(visibleObj, props.name)
-console.log(visible.value)
 </script>
 
 <style  lang='scss'>
@@ -60,7 +59,6 @@ console.log(visible.value)
 .title-icon{
   width: 49px;
   text-align: center;
-  outline: 1px solid darkcyan;
   transition:transform 250ms ;
 }
 .collapse-icon-rotate{

@@ -1,11 +1,13 @@
 <template>
     <transition name="wheel-toast-fade" appear @after-leave="close" >
-      <div class="wheel-toast"  v-if="visible" >{{props.content}}</div>
+      <div class="wheel-toast"  v-if="visible" >
+        <i class="iconfont" :class="classes"></i>
+        {{props.content}}</div>
     </transition>
 </template>
 
 <script setup lang='ts'>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
 type Props={
   time?:number,
@@ -18,6 +20,14 @@ const props = withDefaults(defineProps<Props>(), {
   type: 'message',
   time: 3000
 })
+// icon样式
+const classes = computed(() => {
+  if (props.type === 'success') return 'icon-gou'
+  if (props.type === 'warning') return 'icon-gantanhao-yuankuang'
+  if (props.type === 'message') return 'icon-i'
+  return 'icon-cuowu'
+})
+
 // 自动关闭
 const visible = ref(true)
 onMounted(() => {
@@ -64,6 +74,7 @@ switch (props.type) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 9;
 }
 .wheel-toast-fade-enter-from,
 .wheel-toast-fade-leave-to{
