@@ -1,7 +1,8 @@
 <template>
-  <Title></Title>
-  <i class="iconfont icon-fenlei" @click="visible=!visible"></i>
-  <div class="container">
+  <div class="document" @click=closeAside>
+  <Title ></Title>
+  <i class="iconfont icon-fenlei" @click.stop="visible=!visible"></i>
+  <div class="container" >
       <transition  name="aside-fade">
         <aside class="aside" v-if="visible" >
           <h3>介绍</h3>
@@ -23,6 +24,7 @@
             <router-view></router-view>
         </main>
   </div>
+  </div>
 </template>
 
 <script setup lang='ts'>
@@ -32,9 +34,16 @@ const visible = ref(true)
 window.onresize = () => {
   if (window.innerWidth > 500) {
     visible.value = true
+  } else {
+    visible.value = false
   }
 }
 
+const closeAside = () => {
+  if (window.innerWidth < 500) {
+    visible.value = false
+  }
+}
 </script>
 
 <style scoped lang='scss'>

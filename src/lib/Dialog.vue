@@ -79,6 +79,9 @@ $wd:'.wheel-dialog-';
     transform: translate(-50%,-50%);
     background-color: #fff;
     width: 520px;
+    @media (max-width: 500px) {
+      width: 80%;
+    }
     #{$wd}title{
       padding: 16px 24px;
       font-size: 16px;

@@ -97,5 +97,6 @@ switch (props.type) {
   background-color: v-bind(backgroundColor);
   color: v-bind(color);
   border-radius: 5px;
+
 }
 </style>
