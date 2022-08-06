@@ -33,7 +33,7 @@ const attr = useAttrs()
 
 const emit = defineEmits(['update:modelValue'])
 const onColor = ref(props.switchOnColor)
-let changeState:(()=>void) | null = () => {
+let changeState:(()=>void) | undefined = () => {
   emit('update:modelValue', !props.modelValue)
 }
 
@@ -47,12 +47,12 @@ const cursor = ref('pointer')
 const isLoading = ref(false)
 
 if (attr.disabled === '' || attr.disabled === true || attr.disabled === 'true') {
-  changeState = null
+  changeState = undefined
   cursor.value = 'no-drop'
   onColor.value = 'rgb(225,225,225)'
 }
 if (attr.loading === '' || attr.loading === true || attr.loading === 'true') {
-  changeState = null
+  changeState = undefined
   cursor.value = 'no-drop'
   isLoading.value = true
 }

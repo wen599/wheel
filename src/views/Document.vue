@@ -6,7 +6,6 @@
         <aside class="aside" v-if="visible" >
           <h3>介绍</h3>
           <router-link to="/document/introduce">介绍</router-link>
-          <router-link to="/document/start">开始使用</router-link>
           <h3>组件列表</h3>
           <router-link to="/document/switch">Switch</router-link>
           <router-link to="/document/button">Button</router-link>

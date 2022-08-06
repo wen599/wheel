@@ -31,6 +31,7 @@ const onInput = (e:MouseEvent) => {
 }
 </script>
 <script lang="ts">
+
 export default {
   inheritAttrs: false
 }

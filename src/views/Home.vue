@@ -6,8 +6,12 @@
       <h4>仅供学习</h4>
     </div>
     <div class="link">
+      <a href="https://github.com/wen599/wheel">
         <Button theme="info" class="button">github</Button>
+      </a>
+      <a href="https://gitee.com/wen-599/wheel">
         <Button theme="info" class="button">gitee</Button>
+      </a>
         <Button theme="info" class="button" @click="gotuHome">开始使用</Button>
     </div>
   </div>

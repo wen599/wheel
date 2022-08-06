@@ -9,7 +9,6 @@ const routes: RouteRecordRaw[] = [
     children: [
       { path: '', redirect: '/document/introduce' },
       { path: 'introduce', component: () => import('@/components/IntroducePage.vue') },
-      { path: 'start', component: () => import('@/components/StartPage.vue') },
       { path: 'switch', component: () => import('@/components/SwitchPage.vue') },
       { path: 'button', component: () => import('@/components/ButtonPage.vue') },
       { path: 'tabs', component: () => import('@/components/TabsPage.vue') },

@@ -6,7 +6,7 @@
            v-for="(item,index) in titles"
            :key="index"
            @click="changeSelect(item)"
-           :ref="el => { if (el) divs[index] = el }"
+           :ref="(el:any) => {if (el) divs[index] = el}"
       >{{item}}
       </div>
       <div class="wheel-indicator" ref="indicator"></div>
@@ -15,7 +15,7 @@
     <div class="wheel-tabs-content-container">
 <!--      直接通过slot拿到所有的子节点 然后通过component 组件渲染出来-->
       <template  v-for="(item,index) in childrenNode" :key="index">
-        <component :is="item" v-if="item.props.title===props.selected">
+        <component :is="item" v-if="item?.props?.title===props.selected">
 
         </component>
       </template>
@@ -52,12 +52,12 @@ const changeSelect = (title:string) => {
 }
 
 // 激活时候下面的横线逻辑
-const divs:Ref<HTMLElement[]> = ref([])
+const divs:Ref<Element[]> = ref([])
 const indicator = ref()
 const container = ref()
 const setIndicator = () => {
   // 找出类名含有selected的div
-  const result = divs.value.find((item:HTMLElement) => {
+  const result = divs.value.find((item:Element) => {
     return item.classList.contains('selected')
   })
   // 设置下面横线的宽度为div的宽度和位置
